@@ -1,6 +1,6 @@
 # 🚀 freeCodeCamp Projects
 
-Welcome to my repository showcasing my freeCodeCamp projects! This repository contains solutions to various challenges I've completed as part of my freeCodeCamp journey. The projects demonstrate my skills and progress in web development and other areas as I work through the curriculum.
+Welcome to my repository showcasing my freeCodeCamp projects! This repository contains solutions to various challenges I've completed as part of my freeCodeCamp journey.
 
 ## ✅ Projects Completed
 Here you'll find the solutions I've completed so far, grouped by course:

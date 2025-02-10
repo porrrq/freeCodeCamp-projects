@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>Technical Documentation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <main id="main-doc">
+    <div class="container">
+        <div class="nav-container">
+            <nav id="navbar">
+                <header><h1 class="title">Abductive logic programming</h1></header>
+                <div class="link-container">
+                    <a href="#Introduction" class="nav-link">Introduction</a>
+                    <a href="#Syntax" class="nav-link">Syntax</a>
+                    <a href="#Informal_meaning_and_problem_solving" class="nav-link">Informal meaning and problem solving</a>
+                    
+                        <a href="#Example_1" class="nav-link example">Example 1</a>
+                        <a href="#Example_2" class="nav-link example" >Example 2</a>
+                       <a href="#Example_3" class="nav-link example">Example 3</a>
+
+                  <a href="#Default_reasoning_in_ALP" class="nav-link">Default reasoning in ALP</a>
+                   <a href="#Formal_semantics" class="nav-link">Formal semantics</a>
+                   <a href="#Implementation_and_systems" class="nav-link">Implementation and systems</a>
+                 <a href="#Reference" class="nav-link">Reference</a>
+                </div>
+            </nav>
+            </div>
+
+
+        <div class="content-container">
+            <section class="main-section" id="Introduction">
+                <header>
+                    <h2>Introduction</h2>
+                </header>
+                <article>
+                    <ul>
+                    <li>
+                    <p>
+                    <span class="bold">Abductive logic programming (ALP)</span> is a high-level knowledge-representation framework that can be used to solve problems declaratively, based on abductive reasoning. It extends normal logic programming by allowing some predicates to be incompletely defined, declared as abducible predicates. Problem solving is effected by deriving hypotheses on these abducible predicates (abductive hypotheses) as solutions of problems to be solved. These problems can be either observations that need to be explained (as in classical abduction) or goals to be achieved (as in normal logic programming). It can be used to solve problems in diagnosis, planning, natural language and machine learning. It has also been used to interpret negation as failure as a form of abductive reasoning.
+                    </p>
+                    </li>
+                    </ul>
+                </article>
+            </section>
+            
+            
+            <section class="main-section" id="Syntax">
+                <header>
+                    <h2>Syntax</h2>
+                </header>
+                <article>
+                    <p>
+                        Abductive logic programs have three components, ⟨ P , A , IC ⟩, where:
+                        <ul>
+                            <li>P is a logic program of exactly the same form as in logic programming</li>
+                            <li>A is a set of predicate names, called the abducible predicates</li>
+                            <li>IC is a set of first-order classical formulae.</li>
+                        </ul>
+                    </p>
+                    <p>Normally, the logic program P does not contain any clauses whose head (or conclusion) refers to an abducible predicate. (This restriction can be made without loss of generality.) Also in practice, many times, the integrity constraints in IC are often restricted to the form of denials, i.e. clauses of the form:</p>
+                    <code class="separate">   false:- A1,...,An, not B1, ..., not Bm.</code>
+                    <p>Such a constraint means that it is not possible for all A1,...,An to be true and at the same time all of B1,...,Bm to be false.</p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Informal_meaning_and_problem_solving">
+                <header>
+                    <h2>Informal meaning and problem solving</h2>
+                </header>
+                <article>
+                    <p>The clauses in P define a set of non-abducible predicates and through this they provide a description (or model) of the problem domain. The integrity constraints in IC specify general properties of the problem domain that need to be respected in any solution of a problem.</p>
+                    <p>A problem, G, which expresses either an observation that needs to be explained or a goal that is desired, is represented by a conjunction of positive and negative (NAF) literals. Such problems are solved by computing "abductive explanations" of G.</p>
+                    <p>An abductive explanation of a problem G is a set of positive (and sometimes also negative) ground instances of the abducible predicates, such that, when these are added to the logic program P, the problem G and the integrity constraints IC both hold. Thus abductive explanations extend the logic program P by the addition of full or partial definitions of the abducible predicates. In this way, abductive explanations form solutions of the problem according to the description of the problem domain in P and IC. The extension or completion of the problem description given by the abductive explanations provides new information, hitherto not contained in the solution to the problem. Quality criteria to prefer one solution over another, often expressed via integrity constraints, can be applied to select specific abductive explanations of the problem G.</p>
+                    <p>Computation in ALP combines the backwards reasoning of normal logic programming (to reduce problems to sub-problems) with a kind of integrity checking to show that the abductive explanations satisfy the integrity constraints.</p>
+                    <p>The following two examples, written in simple structured English rather than in the strict syntax of ALP, illustrate the notion of abductive explanation in ALP and its relation to problem solving.</p>
+                    
+
+                    
+
+                   
+                </article>
+            </section>
+
+            <section class="main-section" id="Example_1">
+                <header>
+                    <h3>Example 1</h3>
+                </header>
+                <article>
+                    <p>The abductive logic program, ⟨ P , A , IC ⟩ , has in P the following sentences:</p>
+                    <code class="separate">
+                    <div>Grass is wet <span class="bold">if</span> it rained.</div>
+                    <div>Grass is wet <span class="bold">if</span> the sprinkler was on.</div>
+                    <div>The sun was shining.</div>
+                    </code>
+                    <p>The abducible predicates in A are "it rained" and "the sprinkler was on" and the only integrity constraint in IC is:</p>
+                    <code class="separate">
+                        false <span class="bold">if</span> it rained and the sun was shining.
+                    </code>
+                    <p>The observation that the grass is wet has two potential explanations, "it rained" and "the sprinkler was on", which entail the observation. However, only the second potential explanation, "the sprinkler was on", satisfies the integrity constraint.</p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Example_2">
+                <header>
+                    <h3>Example 2</h3>
+                </header>
+                <article>
+                    <p>Consider the abductive logic program consisting of the following (simplified) clauses:</p>
+                    <code class="separate">
+                        <div>X is a citizen <span class="bold">if</span> X is born in the USA.</div>
+                        <div>X is a citizen <span class="bold">if</span> X is born outside the USA <span class="bold">and</span> X is a resident of the USA <span class="bold">and</span> X is naturalized.</div>
+                        <div>X is a citizen <span class="bold">if</span> X is born outside the USA <span class="bold">and</span>Y is the mother of X <span class="bold">and</span> Y is a citizen <span class="bold">and</span> X is registered.</div>
+                        <div>Mary is the mother of John.</div>
+                        <div>Mary is a citizen.</div>
+                    </code>
+                    <p>together with the five abducible predicates, "is born in the USA", "is born outside the USA", "is a resident of the USA", "is naturalized" and "is registered" and the integrity constraint:</p>
+                    <code class="separate">
+                        <div>false <span class="bold">if</span> John is a resident of the USA.</div>
+                    </code>
+                    <p>The goal "John is citizen" has two abductive solutions, one of which is "John is born in the USA", the other of which is "John is born outside the USA" and "John is registered". The potential solution of becoming a citizen by residence and naturalization fails because it violates the integrity constraint.</p>
+                    <p>A more complex example that is also written in the more formal syntax of ALP is the following.</p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Example_3">
+                <header>
+                    <h3>Example 3</h3>
+                </header>
+                <article>
+                    <p>The abductive logic program below describes a simple model of the lactose metabolism of the bacterium E. coli. The program, P, describes (in its first rule) that E. coli can feed on the sugar lactose if it makes two enzymes permease and galactosidase. Like all enzymes, these are made if they are coded by a gene (Gene) that is expressed (described by the second rule). The two enzymes of permease and galactosidase are coded by two genes, lac(y) and lac(z) respectively (stated in the fifth and sixth rule of the program), in a cluster of genes (lac(X)) – called an operon – that is expressed when the amounts (amt) of glucose are low and lactose are high or when they are both at medium level (see the fourth and fifth rule). The abducibles, A, declare all ground instances of the predicates "amount" as assumable. This reflects that in the model the amounts at any time of the various substances are unknown. This is incomplete information that is to be determined in each problem case. The integrity constraints, IC, state that the amount of any substance (S) can only take one value.</p>
+                    <h4>Domain knowledge (P)</h4>
+                    <code class="separate">
+                        <div>feed(lactose) :- make(permease), make(galactosidase).</div>
+                        <div>make(Enzyme) :- code(Gene, Enzyme), express(Gene).</div>
+                        <div>express(lac(X)) :- amount(glucose, low), amount(lactose, hi).</div>
+                        <div>express(lac(X)) :- amount(glucose, medium), amount(lactose, medium).</div>
+                        <div>code(lac(y), permease).</div>
+                        <div>code(lac(z), galactosidase).</div>
+                        <div> temperature(low) :- amount(glucose, low).</div>
+                    </code>
+                    <h4>Integrity constraints (IC)</h4>
+                    <code class="separate">
+                        <div>false :- amount(S, V1), amount(S, V2), V1 ≠ V2.</div>
+                    </code>
+                    <h4>Abducibles (A)</h4>
+                    <code class="separate">
+                        <div>abducible_predicate(amount).</div>
+                    </code>
+                    <p>The problem goal is G = feed(lactose). This can arise either as an observation to be explained or as a state of affairs to be achieved by finding a plan. This goal has two abductive explanations:</p>
+                    <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4af96b554c7ca2835406b7091ebeb1c136407b3e" class="formula-img  ">
+                    <p>The decision which of the two to adopt could depend on additional information that is available, e.g. it may be known that when the level of glucose is low then the organism exhibits a certain behaviour – in the model such additional information is that the temperature of the organism is low – and by observing the truth or falsity of this it is possible to choose the first or second explanation respectively.</p>
+                    <p>Once an explanation has been chosen, then this becomes part of the theory, which can be used to draw new conclusions. The explanation and more generally these new conclusions form the solution of the problem.</p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Default_reasoning_in_ALP">
+                <header>
+                    <h2>Default reasoning in ALP</h2>
+                </header>
+                <article>
+                    <p>As shown in the Theorist system, abduction can also be used for default reasoning. Moreover, abduction in ALP can simulate negation as failure in normal logic programming.</p>
+                    <p>Consider the classic example of reasoning by default that a bird can fly if it cannot be shown that the bird is abnormal. Here is a variant of the example using negation as failure:</p>
+                    <code class="separate">
+                        <div>canfly(X) :- bird(X), not(abnormal_flying_bird(X)).</div>
+                        <div>abnormal_flying_bird(X):- wounded(X).</div>
+                        <div>bird(john).</div>
+                        <div>bird(mary).</div>
+                        <div>wounded(john).</div>
+                    </code>
+                    <p>Here is the same example using an abducible predicate <code class="inline">normal_flying_bird(_)</code> with an integrity constraint in ALP:</p>
+                    <code class="separate">
+                        <div>canfly(X) :- bird(X), normal_flying_bird(X).</div>
+                        <div>false :- normal_flying_bird(X), wounded(X).</div>
+                        <div>bird(john).</div>
+                        <div>bird(mary).</div>
+                        <div>wounded(john).</div>
+                    </code>
+                    <p>
+                        The abducible predicate <code class="inline">normal_flying_bird(_)</code>, is the contrary of the predicate <code class="inline">abnormal_flying_bird(_)</code>.
+                        Using abduction in ALP it is possible to conclude <code class="inline">canfly(mary)</code> under the assumption <code class="inline">normal_flying_bird(mary)</code>. 
+                        The conclusion can be derived from the assumption because it cannot be shown that the integrity constraint is violated, which is because it cannot be shown that <code class="inline">wounded(mary)</code>. 
+                        In contrast, it is not possible to conclude <code class="inline">canfly(john)</code>, because the assumption <code class="inline">normal_flying_bird(john)</code> together with the fact <code class="inline">wounded(john)</code> violates the integrity constraint. 
+                        This manner of reasoning in ALP simulates reasoning with negation as failure.
+                    </p>
+                    <p>
+                        Conversely, it is possible to simulate abduction in ALP using negation as failure with the stable model semantics. 
+                        This can be done by adding, for every abducible predicate <code class="inline">p,</code> an additional contrary predicate <code class="inline">negp,</code> and a pair of clauses:
+                    </p>
+                    <code class="separate">
+                        <div>p :- not(negp).</div>
+                        <div>negp :- not(p).</div>
+                    </code>
+                    <p>
+                        This pair of clauses has two stable models, one in which <code class="inline">p,</code> is true, and the other in which <code class="inline">negp,</code> is true. This technique for simulating abduction is commonly used in answer set programming to solve problems using a generate and test methodology.
+                    </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Formal_semantics">
+                <header>
+                    <h2>Formal semantics</h2>
+                </header>
+                <article>
+                    <p>The formal semantics of the central notion of an abductive explanation in ALP can be defined in the following way.</p>
+                    <p>
+                        Given an abductive logic program, ⟨ P , A , IC ⟩, an abductive explanation for a problem G is a set Δ of ground atoms on abducible predicates such that:
+                    </p>
+                    <ul>
+                        <li><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e158691dc3c272808303bcddd3f8996efd0f1910" class="formula-img"></li>
+                        <li><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4ee1ff245803c30098431fc8c9ea1ab5abf65cba" class="formula-img"></li>
+                        <li><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ea5c3b3f04075ce733896cb48b847b9c5624444c" class="formula-img"> is a constant</li>
+                    </ul>
+                    <p>
+                        This definition leaves open the choice of the underlying semantics of logic programming through which we give the exact meaning of the entailment relation  ⊨ and the notion of consistency of the (extended) logic programs. Any of the different semantics of logic programming such as the completion, stable or well-founded semantics can (and have been used in practice) to give different notions of abductive explanations and thus different forms of ALP frameworks.
+                    </p>
+                    <p>
+                        The above definition takes a particular view on the formalization of the role of the integrity constraints IC as restrictions on the possible abductive solutions. It requires that these are entailed by the logic program extended with an abductive solution, thus meaning that in any model of the extended logic program (which one can think of as an ensuing world given Δ) the requirements of the integrity constraints are met. In some cases this may be unnecessarily strong and the weaker requirement of consistency, namely that P ∪ IC ∪ Δ is consistent, can be sufficient, meaning that there exists at least one model (possible ensuing world) of the extended program where the integrity constraints hold. In practice, in many cases, these two ways of formalizing the role of the integrity constraints coincide as the logic program and its extensions always have a unique model. Many of the ALP systems use the entailment view of the integrity constraints as this can be easily implemented without the need for any extra specialized procedures for the satisfaction of the integrity constraints since this view treats the constraints in the same way as the problem goal. In many practical cases, the third condition in this formal definition of an abductive explanation in ALP is either trivially satisfied or it is contained in the second condition via the use of specific integrity constraints that capture consistency.
+                    </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Implementation_and_systems">
+                <header>
+                    <h2>Implementation and systems</h2>
+                </header>
+                <article>
+                    <ul>
+                        <li><p>Most of the implementations of ALP extend the SLD resolution-based computational model of logic programming. ALP can also be implemented by means of its link with Answer Set Programming (ASP), where the ASP systems can be employed. Examples of systems of the former approach are ACLP, A-system, CIFF, SCIFF, ABDUAL and ProLogICA.</p></li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="main-section" id="Reference">
+                <header>
+                    <h2>Reference</h2>
+                </header>
+                <article>
+                    <ul>
+                        <li>All the documentation in this page is taken from <a href="https://en.wikipedia.org/wiki/Abductive_logic_programming#Default_reasoning_in_ALP" class="ext-link">Wikipedia</a></li>
+                    </ul>
+                </article>
+            </section>
+        </div>
+        </div>
+        </main>
+    </body>
+</html>

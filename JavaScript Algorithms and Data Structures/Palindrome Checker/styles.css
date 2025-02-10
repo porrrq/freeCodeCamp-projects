@@ -1,0 +1,101 @@
+:root {
+    --bg-color1: #121212;
+    --bg-color2: #1E1E1E;
+    --text-color1: #E0E0E0;
+    --text-color2: #B0B0B0;
+    --text-color3: #FF4C4C;
+    --border-color1: #282828;
+    --highlight-color1: #BB86FC;
+    --highlight-color2: #03DAC6;
+    --highlight-color3: #FF9800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /*Appearance*/
+    font-family: "Lexend",serif;
+    background-color: var(--bg-color1);
+    color: var(--text-color1);
+
+    /*Sizing*/
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
+    min-height: fit-content;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+.title-container {
+    margin-top: 20vh;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.title-container h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+.title-container p {
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+.highlight {
+    color: var(--highlight-color2)
+}
+
+.program-container {
+    transform: scale(1.25);
+    max-width: max-content;
+    border: 3px solid var(--border-color1);
+    border-radius: 10px;
+    height: auto;
+    margin: 30px  auto 0 auto;
+    padding: 10px;
+    background-color: var(--bg-color2);
+    justify-items: center;
+}
+.instruction {
+    
+    color: var(--highlight-color1);
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+#text-input {
+    height: 28px;
+    width: 200px;
+}
+#check-btn {
+    width: 100px;
+    height: 28px;
+}
+
+#result {
+    margin-top: 10px;
+}
+.hide {
+    display: none;
+}
+.yes {
+    color: var(--highlight-color2);
+}
+.no {
+    color: var(--highlight-color3);
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+

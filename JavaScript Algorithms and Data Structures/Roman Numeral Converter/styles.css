@@ -1,0 +1,140 @@
+:root {
+    /*https://github.com/YV31/gruvbox-css/blob/master/src/gruvbox-dark.css*/
+
+    --bg_h: #1d2021;
+    --bg:   #282828;
+    --bg_s: #32302f;
+    --bg1:  #3c3836;
+    --bg2:  #504945;
+    --bg3:  #665c54;
+    --bg4:  #7c6f64;
+  
+    --fg:  #fbf1c7;
+    --fg1: #ebdbb2;
+    --fg2: #d5c4a1;
+    --fg3: #bdae93;
+    --fg4: #a89984;
+  
+    --red:    #fb4934;
+    --green:  #b8bb26;
+    --yellow: #fabd2f;
+    --blue:   #83a598;
+    --purple: #d3869b;
+    --aqua:   #8ec07c;
+    --gray:   #928374;
+    --orange: #fe8019;
+  
+    --red-dim:    #cc2412;
+    --green-dim:  #98971a;
+    --yellow-dim: #d79921;
+    --blue-dim:   #458588;
+    --purple-dim: #b16286;
+    --aqua-dim:   #689d6a;
+    --gray-dim:   #a89984;
+    --orange-dim: #d65d0e;
+  }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
+    background: var(--bg_h);
+    color: var(--fg);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    place-items: center;
+    height: 100vh;
+    min-height: 250px;
+    width: 90vw;
+    padding:20px;
+    margin:auto;
+}
+.title {
+    margin-top: 75px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--yellow);
+}
+.description {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--green-dim)
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    place-items: center;
+}
+#input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--bg_s);
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--background-color);
+    width: 250px;
+    transform-origin: bottom;
+}
+
+.ins {
+    font-size: 1.25rem;
+}
+input {
+    height: 2rem;
+    width: 75%;
+    border: 2px solid var(--aqua);
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+input:focus {
+    outline: none;
+    border: 2px solid var(--orange);
+}
+button {
+    min-width: 72px;
+    width: 30%;
+    height: 42px;
+    background-color: var(--blue);
+    color: var(--fg);
+}
+button:hover {
+    background-color: var(--purple);
+}
+
+#output {
+    margin-top: 20px;
+    background-color: var(--bg_s);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    color: var(--fg) 
+}
+.false {
+    border: 2px solid var(--red) !important;
+    background-color: var(--red-dim) !important;
+}
+
+@media screen and (min-width: 1024px) {
+    .title {font-size: 5rem;}
+    .description {font-size:1.5rem;}
+    #input-container {
+        width: 650px;
+    }
+    .ins {font-size:2.5rem;}
+    input {height: 3rem;}
+    #output-container {
+        width: 500px;
+    }
+    #output {font-size: 2rem;}
+}

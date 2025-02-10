@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Import Lexend font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main>
+    
+    <!-- Title -->
+    <div class="title-container">
+        <h1>Is it a Palindrome?</h1>
+        <p>A <span class="highlight">palindrome</span> is a word or sentence that's <span class="highlight">spelled the same way both forward and backward</span>, ignoring <span class="highlight">punctuation, case, and spacing</span>.
+        </p>
+    </div>
+
+    <!-- Input + result container-->
+    <div class="program-container">
+        <p class="instruction">Enter in text to check for a palindrome:
+        </p>
+        <input id="text-input">
+        <button id="check-btn" type="button">Check</button>
+        <p class="hide no" id="result">Example Result text</p> <!-- Result in form: ${text} is (is not) a palindrome.-->
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+:root {
+  --background-color: #121212; /* Dark background */
+  --foreground-color: #ffffff; /* Light text */
+  --primary-color: #bb86fc;    /* Primary accent */
+  --secondary-color: #03dac6;  /* Secondary accent */
+  --error-color: #cf6679;      /* Error highlight */
+  --surface-color: #1e1e1e;    /* Slightly lighter dark surface */
+  --on-surface-color: #e0e0e0; /* Text on surface */
+  --border-color: #292929;     /* Border color */
+  --hover-color: #333333;      /* Hover effect */
+  --shadow-color: rgba(0, 0, 0, 0.5); /* Shadow */
+}
+* {
+    font-family: "Varela",sans-serif;
+    text-align: center;
+    margin:auto;
+    color: var(--foreground-color);
+}
+html {
+    background-color: var(--background-color);
+}
+main {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+h1 {
+    margin: 30px;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+#change-due {
+    background: var(--surface-color);
+    width: fit-content;
+    height: fit-content;
+    /* padding: 30px; */
+    border-radius: 5px;
+}
+.cid-container {
+    display: flex;
+    flex-direction: column;
+}
+.info-container {
+    background: var(--surface-color);
+    color: var(--on-surface-color);
+    width: max-content;
+    padding: 30px;
+    border-radius: 5px;
+}
+#price {
+    background: var(--hover-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#purchase-btn {
+    color: var(--background-color);
+    border: 1px solid var(--foreground-color);
+    height: 2rem;
+    width: 10rem;
+    border-radius: 5px;
+}
+#purchase-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--foreground-color);
+}
+input {
+    
+    height: 3rem;
+    width: 15rem;
+    background-color: var(--hover-color);
+    border: 5px solid var(--border-color);
+    font-size: 2rem;
+    border-radius: 5px;
+    outline: none;
+}
+input:focus {
+    border-color: var(--foreground-color)
+}

@@ -1,0 +1,142 @@
+body {
+  background-image:url("https://gruvbox-wallpapers.pages.dev/wallpapers/irl/berries.jpg")  ;
+}
+
+main {
+  background-color: #292828; 
+  width: 95%;
+  height: 95%; 
+  margin: auto;
+  color:#FBF1C7;
+  opacity: 0.95;
+  padding: 0 10px 0 10px;
+}
+
+#img-div {
+  width: 500px;
+  height: auto;
+  overflow: hidden;
+  margin: 30px auto 10px auto;
+  display: block;
+} 
+
+#image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 10px; 
+}
+
+#title {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+  color: #CC241D;
+}
+
+#sub-title,#img-caption {
+  font-size: 0.8rem;
+  text-align: center;
+  font-style: italic;
+  
+}
+#img-caption {
+  color: #8EC07C;
+}
+
+.highlight {
+  color: #FABD2F;
+}
+
+#end {
+  font-size: 1.25rem;
+  text-align: center;
+  padding-bottom: 30px;
+  margin-top: 3px;
+}
+
+#tribute-link {
+  color: #FE8019;
+  text-decoration: none;
+}
+
+#tribute-link:hover {
+  background-color:#A89984;
+  color: #282828;
+}
+
+#disc {
+  font-size: 0.75rem;
+  color: #FB4934;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+#tribute-info {
+  max-width: 800px;
+  margin: auto;
+}
+
+.mid {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+.info-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.info-pic {
+  width: 300px;
+}
+
+ul {
+  width: 90%;
+}
+
+li {
+  max-width: 80%;
+  padding: 5px;
+  }
+
+.img-cont {
+  width: 500px;
+  max-width: 100%;
+}
+
+.deco-img {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+}
+
+.caption {
+  font-size: 0.75rem;
+  color: #8EC07C;
+  text-align: center;
+}
+
+.tn {
+  margin-bottom: 3px;
+}
+
+.divider {
+  background-color: #A89984;
+  width: 70%;
+  height: 3px;
+  margin: 50px auto 20px auto;
+
+}
+
+.info-block {
+  max-width: 100%;
+}

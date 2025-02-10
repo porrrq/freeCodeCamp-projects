@@ -1,0 +1,126 @@
+:root {
+    font-size: 16px;
+    --primary-color: #ffcb05; /* Pokémon Logo Yellow */
+    --secondary-color: #2063a1; /* Pokémon Logo Blue */
+    --dim-secondary-color: #18446d;
+    --text-color: #333333;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: "Montserrat",serif;
+    color: var(--text-color)
+}
+img {
+    height: max-content;
+    width: max-content;
+    padding:0;
+    margin:0;
+}
+.not-found-img {
+    width: 100%;
+    border-radius: 20px;
+    display: none;
+    margin-top: 20px;
+}
+h1 {
+    text-align: center;
+    margin: 40px;
+}
+main {
+    background: whitesmoke;
+    border-radius: 10px;
+    width: 300px;
+    height: fit-content;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 5px 10px gray;
+}
+
+.instruction {
+    font-size: 1.5rem;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.note {
+    color: purple;
+    margin:10px;
+    margin-left:0;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+}
+.search-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    gap: 15px;
+}
+#search-input {
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding:15px;
+    font-size: 1.25rem;
+}
+#search-button {
+    margin-top: px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    background: var(--secondary-color);
+    color: whitesmoke
+}
+#search-button:hover {
+    background: var(--dim-secondary-color)
+}
+.divider {
+    width: 80%;
+    height: 1px;
+    background-color: gray;
+    margin: 30px;
+    display:none;
+}
+.name-and-id-container {
+    display:flex;
+    gap:5px;
+}
+#pokemon-name {
+    font-size: 1.25rem;
+}
+#pokemon-id {
+    font-size: 0.8rem;
+}
+.img-container {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+}
+
+#types {
+    margin-top:5px;
+    display: flex;
+    gap: 5px;
+}
+.type {
+    font-size: 0.7rem;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+}
+.info-container {
+    display: none;
+    gap: 20px;
+    justify-content: space-between;
+}
+.stat-container div {
+    text-align: end;
+}

@@ -1,11 +1,6 @@
 # 🚀 freeCodeCamp Projects
 
-Welcome to my repository showcasing my freeCodeCamp projects! This repository contains solutions to various challenges I've completed as part of my freeCodeCamp journey. The projects demonstrate my skills and progress in web development and other areas as I work through the curriculum.
-
-## ⏳ Projects in Progress
-I am currently working on the following projects:
-
-Stay tuned for updates as I continue developing these projects.
+Welcome to my repository showcasing my freeCodeCamp projects! This repository contains solutions to various challenges I've completed as part of my freeCodeCamp journey.
 
 ## ✅ Projects Completed
 Here you'll find the solutions I've completed so far, grouped by course:
@@ -23,6 +18,9 @@ Here you'll find the solutions I've completed so far, grouped by course:
 - [Telephone Number Validator](./JavaScript%20Algorithms%20and%20Data%20Structures/Telephone%20Number%20Validator/preview.png)
 - [Cash Register](./JavaScript%20Algorithms%20and%20Data%20Structures/Cash%20Register/preview.png)
 - [Pokémon Search App](./JavaScript%20Algorithms%20and%20Data%20Structures/Pokémon%20Search%20App/preview.png)
+
+### Data Analysis with Python
+- [Mean-Variance-Standard Deviation Calculator](./Data%20Analysis%20with%20Python/Mean-Variance-Standard%20Deviation%20Calculator/preview.png)
 
 Feel free to explore the code and let me know if you have any questions or suggestions!
 

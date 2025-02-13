@@ -23,6 +23,7 @@ Here you'll find the solutions I've completed so far, grouped by course:
 - [Mean-Variance-Standard Deviation Calculator](./Data%20Analysis%20with%20Python/Mean-Variance-Standard%20Deviation%20Calculator/preview.png)
 - [Demographic Data Analyzer](./Data%20Analysis%20with%20Python/Demographic%20Data%20Analyzer/report.ipynb)
 - [Medical Data Visualizer](./Data%20Analysis%20with%20Python/Medical%20Data%20Visualizer/report.ipynb)
+- [Page View Time Series Visualizer](./Data%20Analysis%20with%20Python/Page%20View%20Time%20Series%20Visualizer/report.ipynb)
 
 Feel free to explore the code and let me know if you have any questions or suggestions!
 

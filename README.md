@@ -34,6 +34,7 @@ Here are the certificates I have earned from freeCodeCamp:
 
 - [Responsive Web Design Certificate](https://www.freecodecamp.org/certification/Punyawat/responsive-web-design)
 - [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/Punyawat/javascript-algorithms-and-data-structures-v8)
+- [Data Analysis with Python](https://www.freecodecamp.org/certification/Punyawat/data-analysis-with-python-v7)
 
 ## 🙋🏻‍♂️ Contact
 

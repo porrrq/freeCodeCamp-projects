@@ -33,11 +33,11 @@ def draw_plot():
         x = df2['Year'],
         y = df2['CSIRO Adjusted Sea Level']
     )
-    predicted = [y*reg2.slope+reg2.intercept for y in range(2000,2051,1)]
+    predicted2 = [y*reg2.slope+reg2.intercept for y in range(2000,2051,1)]
     
     plt.plot(
         pd.Series([y for y in range(2000,2051,1)]),
-        predicted,
+        predicted2,
         color="lime"
     )
     # Add labels and title

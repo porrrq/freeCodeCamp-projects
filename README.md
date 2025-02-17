@@ -5,6 +5,13 @@ Welcome to my repository showcasing my freeCodeCamp projects! This repository co
 ## ✅ Projects Completed
 Here you'll find the solutions I've completed so far, grouped by course:
 
+### Data Analysis with Python
+- [Mean-Variance-Standard Deviation Calculator](./Data%20Analysis%20with%20Python/Mean-Variance-Standard%20Deviation%20Calculator/preview.png)
+- [Demographic Data Analyzer](./Data%20Analysis%20with%20Python/Demographic%20Data%20Analyzer/report.ipynb)
+- [Medical Data Visualizer](./Data%20Analysis%20with%20Python/Medical%20Data%20Visualizer/report.ipynb)
+- [Page View Time Series Visualizer](./Data%20Analysis%20with%20Python/Page%20View%20Time%20Series%20Visualizer/report.ipynb)
+- [Sea Level Predictor](./Data%20Analysis%20with%20Python/Sea%20Level%20Predictor/report.ipynb)
+
 ### Responsive Web Design
 - [Survey Form](./Responsive%20Web%20Design/Survey%20Form/preview.png)
 - [Tribute Page](./Responsive%20Web%20Design/Tribute%20Page/preview.png)
@@ -19,12 +26,6 @@ Here you'll find the solutions I've completed so far, grouped by course:
 - [Cash Register](./JavaScript%20Algorithms%20and%20Data%20Structures/Cash%20Register/preview.png)
 - [Pokémon Search App](./JavaScript%20Algorithms%20and%20Data%20Structures/Pokémon%20Search%20App/preview.png)
 
-### Data Analysis with Python
-- [Mean-Variance-Standard Deviation Calculator](./Data%20Analysis%20with%20Python/Mean-Variance-Standard%20Deviation%20Calculator/preview.png)
-- [Demographic Data Analyzer](./Data%20Analysis%20with%20Python/Demographic%20Data%20Analyzer/report.ipynb)
-- [Medical Data Visualizer](./Data%20Analysis%20with%20Python/Medical%20Data%20Visualizer/report.ipynb)
-- [Page View Time Series Visualizer](./Data%20Analysis%20with%20Python/Page%20View%20Time%20Series%20Visualizer/report.ipynb)
-- [Sea Level Predictor](./Data%20Analysis%20with%20Python/Sea%20Level%20Predictor/report.ipynb)
 
 Feel free to explore the code and let me know if you have any questions or suggestions!
 
@@ -32,9 +33,9 @@ Feel free to explore the code and let me know if you have any questions or sugge
 
 Here are the certificates I have earned from freeCodeCamp:
 
+- [Data Analysis with Python](https://www.freecodecamp.org/certification/Punyawat/data-analysis-with-python-v7)
 - [Responsive Web Design Certificate](https://www.freecodecamp.org/certification/Punyawat/responsive-web-design)
 - [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/Punyawat/javascript-algorithms-and-data-structures-v8)
-- [Data Analysis with Python](https://www.freecodecamp.org/certification/Punyawat/data-analysis-with-python-v7)
 
 ## 🙋🏻‍♂️ Contact
 

@@ -2,6 +2,11 @@
 
 Welcome to my repository showcasing my freeCodeCamp projects! This repository contains solutions to various challenges I've completed as part of my freeCodeCamp journey.
 
+
+📌 Currently Working On
+I'm currently working on `Scientific Computing with Python`. Stay tuned for more updates as I complete new projects!
+
+
 ## ✅ Projects Completed
 Here you'll find the solutions I've completed so far, grouped by course:
 

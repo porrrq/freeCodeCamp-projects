@@ -5,6 +5,10 @@ Welcome to my repository showcasing my freeCodeCamp projects! This repository co
 ## ✅ Projects Completed
 Here you'll find the solutions I've completed so far, grouped by course:
 
+### Scientific Computing with Python
+- [Arithmetic Formatter](./Scientific%20Computing%20with%20Python/Arithmetic%20Formatter/report.ipynb)
+
+
 ### Data Analysis with Python
 - [Mean-Variance-Standard Deviation Calculator](./Data%20Analysis%20with%20Python/Mean-Variance-Standard%20Deviation%20Calculator/preview.png)
 - [Demographic Data Analyzer](./Data%20Analysis%20with%20Python/Demographic%20Data%20Analyzer/report.ipynb)

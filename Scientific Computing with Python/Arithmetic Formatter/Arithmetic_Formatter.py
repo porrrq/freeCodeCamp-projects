@@ -40,7 +40,7 @@ def arithmetic_arranger(problems, show_answers=False):
         while len(num1) < size:
             num1 = " " + num1
         problems_formatted += num1 + problem_space
-    problems_formatted.rstrip()
+    problems_formatted = problems_formatted.rstrip(problem_space)
     
     #add line2 to `problems`
     problems_formatted += "\n"
@@ -49,13 +49,14 @@ def arithmetic_arranger(problems, show_answers=False):
         space_req = size - 1 - len(num2)
         num2 = operator + " " * space_req + num2
         problems_formatted += num2 + problem_space
-    problems_formatted.rstrip()
+    problems_formatted = problems_formatted.rstrip(problem_space)
+
         
     #add '-' to the `problems`
     problems_formatted += "\n"
     for size in container['size']:
         problems_formatted += "-" * size + problem_space
-    problems_formatted.rstrip(problem_space)
+    problems_formatted = problems_formatted.rstrip(problem_space)
 
     # in case of show_answer = True
     # Calculate solution
@@ -71,11 +72,6 @@ def arithmetic_arranger(problems, show_answers=False):
             while len(solution) < size:
                 solution = " " + solution
             problems_formatted += solution + problem_space
-        problems_formatted.rstrip()
-    
+        problems_formatted = problems_formatted.rstrip(problem_space)
     
     return problems_formatted 
-print(arithmetic_arranger(["3801 - 2", "123 + 49"]))
-print(len(arithmetic_arranger(["3801 - 2", "123 + 49"])))
-print(len('  3801      123\n-    2    +  49\n------    -----'))
-# assert arithmetic_arranger(["3801 - 2", "123 + 49"]) == '  3801      123\n-    2    +  49\n------    -----'

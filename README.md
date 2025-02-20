@@ -12,6 +12,7 @@ Here you'll find the solutions I've completed so far, grouped by course:
 
 ### Scientific Computing with Python
 - [Arithmetic Formatter](./Scientific%20Computing%20with%20Python/Arithmetic%20Formatter/report.ipynb)
+- [Time Calculator](./Scientific%20Computing%20with%20Python/Time%20Calculator/time_calculator.py)
 
 
 ### Data Analysis with Python

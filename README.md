@@ -4,16 +4,20 @@ Welcome to my repository showcasing my freeCodeCamp projects! This repository co
 
 
 ## 📌 Currently Working On
-I'm currently working on `Scientific Computing with Python`. Stay tuned for more updates as I complete new projects!
-
+I'm currently working on `Algorithmic Trading Using Python - Full Course`. Stay tuned for more updates as I complete new projects!
 
 ## ✅ Projects Completed
 Here you'll find the solutions I've completed so far, grouped by course:
 
-### Scientific Computing with Python
+### Youtube
+#### Algorithmic Trading Using Python - Full Course
+- Building An Equal-Weight S&P 500 Index Fund
+- Todo: Building A Quantitative Momentum Investment Strategy
+- Todo: Building A Quantitative Value Investing Strategy
+
+### Scientific Computing with Python (Currently Depreciated)
 - [Arithmetic Formatter](./Scientific%20Computing%20with%20Python/Arithmetic%20Formatter/report.ipynb)
 - [Time Calculator](./Scientific%20Computing%20with%20Python/Time%20Calculator/time_calculator.py)
-
 
 ### Data Analysis with Python
 - [Mean-Variance-Standard Deviation Calculator](./Data%20Analysis%20with%20Python/Mean-Variance-Standard%20Deviation%20Calculator/preview.png)
